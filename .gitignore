@@ -22,3 +22,8 @@
 
 .byebug_history
 
+# PubyMine files
+.idea
+
+# temporary files
+/tmp/*
