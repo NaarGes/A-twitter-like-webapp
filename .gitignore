@@ -27,3 +27,6 @@
 
 # temporary files
 /tmp/*
+
+# Ignore Spring files.
+/spring/*.pid
