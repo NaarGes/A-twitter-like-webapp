@@ -2,12 +2,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-
   end
 
   def new
     @user = User.new
-    # debugger
   end
 
   def create
@@ -23,6 +21,15 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      # handle a successful update
+    else
+      render 'edit'
+    end
   end
 
   private
